@@ -1,0 +1,11 @@
+import mongoose from "mongoose";
+
+const Schema = new mongoose.Schema({
+  link: { type: String, required: true },
+  image: { type: String, required: true },
+  style: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
+});
+
+const Banners = mongoose.model("Banners", Schema);
+export default Banners;
